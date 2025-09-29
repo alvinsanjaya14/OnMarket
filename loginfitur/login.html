@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Login OnMarket</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+     <div class="navbar-fixed">
+    <nav class="white">
+      <div class="nav-wrapper">
+        <div class="container">
+        <img src="./img/logo.png" alt="OnMarket Logo" class="logo">
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons blue darken-4">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="../index.html"> Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+          <li>
+            <a href="./signup.html" class="btn btn-signup indigo darken-3 white-text waves-effect waves-light">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    </nav>
+  </div>
+    <!-- akhir fixed -->
+         <!-- Fixed navbar -->
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="../index.html"> Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="./signup.html" class="btn btn-signup indigo darken-3 white-text waves-effect waves-light">Sign Up</a>
+          </li>
+    </ul>
+    <!-- akhir fixed -->
+  <main class="auth-wrapper">
+    <section class="auth-card" aria-labelledby="loginTitle">
+       <div class="container grey-text">
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <div class="card z-depth-4">
+          <div class="card-content">
+                 <h2 id="loginTitle" class="auth-title">LOGIN</h2>
+      <p class="auth-subtitle">Gunakan email dan kata sandi Anda.</p>
+            <form id="loginForm">
+              <div class="input-field">
+                <i class="material-icons prefix">email</i>
+                <input type="email" id="loginEmail" required>
+                <label for="loginEmail">Email</label>
+              </div>
+              <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" id="loginPassword" required>
+                <label for="loginPassword">Password</label>
+              </div>
+              <div class="center">
+                <button class="btn indigo darken-3 waves-effect waves-light" type="submit">Login</button>
+              </div>
+            </form>
+          </div>
+          <div class="card-action center">
+            <span class="grey-text">Belum punya akun?</span>
+            <a href="./signup.html" class="indigo-text">Daftar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div id="loginNotice" class="notice" role="status" aria-live="polite"></div>
+</section>
+</main>
+
+<p id="loginNotice" class="notice"></p>
+
+
+
+
+  <script src="./js/web.js" defer></script>
+  <script type="text/javascript" src="./js/materialize.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+</script>
+
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const foundUser = users.find(u => u.email === email && u.password === password);
+
+    if (foundUser) {
+      // simpan status login
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("userName", foundUser.name);
+
+      alert("Login berhasil! Selamat datang " + foundUser.name);
+      window.location.href = "../index.html"; // redirect ke index.html
+    } else {
+      alert("Email atau password salah!");
+    }
+  });
+</script>
+
+
+</body>
+</html>
+
+
