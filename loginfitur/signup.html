@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Login OnMarket</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+     <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <img src="../img/logo.png" alt="OnMarket Logo" class="logo">
+      
+      <ul class="nav-links" id="navLinks">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">Contact</a></li>
+          <button class="btn-login"><a href="./login.html"> LOGIN </a></button>
+      </ul>
+
+      <div class="nav-icons">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    </div>
+
+  </nav>
+  <!-- Akhir Navbar -->
+
+  <!-- sign up -->
+
+  <main class="auth-wrapper">
+    <section class="auth-card" aria-labelledby="signupTitle">
+      <div class="container grey-text">
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <div class="card z-depth-4">
+          <div class="card-content">
+            <h2 id="signupTitle" class="auth-title">Buat Akun</h2>
+      <p class="auth-subtitle">Daftar untuk mulai menjelajah Marketplace Kami.</p>
+            <form id="signupForm">
+              <div class="input-field">
+                <img src="../img/person.png" alt="User Icon" class="prefix-icon">
+                <input type="text" id="signupName" required>
+                <label for="signupName">Nama Lengkap</label>
+              </div>
+              <div class="input-field">
+                <img src="../img/email.png" alt="Email Icon" class="prefix-icon">
+                <input type="email" id="signupEmail" required>
+                <label for="signupEmail">Email</label>
+              </div>
+              <div class="input-field">
+                <img src="../img/pass.png" alt="Lock Icon" class="prefix-icon">
+                <input type="password" id="signupPassword" required minlength="6">
+                <label for="signupPassword">Password</label>
+              </div>
+              <div class="center">
+                <button class="btn indigo darken-3 waves-effect waves-light" type="submit">Daftar</button>
+              </div>
+            </form>
+          </div>
+          <div class="card-action center">
+            <span class="grey-text">Sudah punya akun?</span>
+            <a href="./login.html" class="indigo-text">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  </main>
+
+  <!-- akhir sign.up -->
+
+  </body>
+    <script src="../js/app.js" defer></script>
+    <script src="../js/signup.js" defer></script>
+  </html>
+
+
+
+
+
+

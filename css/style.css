@@ -87,7 +87,105 @@ body {
   cursor: pointer;
 }
 
+/* button login  */
+.btn-rush {
+  margin-top: -10px;
+  background-color: #fff;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(224, 196, 12, 0.95);
+  padding: 8px 16px;
+  border: 3px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-out {
+  background-color: #e01111ff;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(224, 196, 12, 0.95);
+  padding: 8px 16px;
+  border: 3px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
 /* Akhir Navbar + Logo */
+
+/* login.html */
+
+.navbar .btn-login {
+  background: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navbar .btn-login a {
+  color: #000;
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  background: #f1c40f;
+}
+
+.auth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+.auth-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+.auth-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #666;
+}
+.auth-subtitle {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #888;
+}
+.input-field {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.input-field label {
+  font-size: 14px;
+  color: #555;
+}
+.input-field input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.auth-card .card-action {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.auth-card .card-action a {
+  color: #1e2da9;
+  text-decoration: none;
+}
+
+/* akhir login.html */
 
 /* Responsive */
 @media (max-width: 768px) {

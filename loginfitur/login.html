@@ -4,40 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Login OnMarket</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
-    <!-- Navbar -->
-     <div class="navbar-fixed">
-    <nav class="white">
-      <div class="nav-wrapper">
-        <div class="container">
-        <img src="./img/logo.png" alt="OnMarket Logo" class="logo">
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons blue darken-4">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="../index.html"> Home</a></li>
-          <li><a href="#contact">Contact</a></li>
+     <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <img src="../img/logo.png" alt="OnMarket Logo" class="logo">
+      
+      <ul class="nav-links" id="navLinks">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">Contact</a></li>
+          <button class="btn-login"><a href="./signup.html">Sign Up</a></button>
+      </ul>
 
-          <li>
-            <a href="./signup.html" class="btn btn-signup indigo darken-3 white-text waves-effect waves-light">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-
+      <div class="nav-icons">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
-    </nav>
-  </div>
-    <!-- akhir fixed -->
-         <!-- Fixed navbar -->
-    <ul class="sidenav" id="mobile-nav">
-      <li><a href="../index.html"> Home</a></li>
-      <li><a href="#contact">Contact</a></li>
-          <li>
-            <a href="./signup.html" class="btn btn-signup indigo darken-3 white-text waves-effect waves-light">Sign Up</a>
-          </li>
-    </ul>
-    <!-- akhir fixed -->
+    </div>
+
+  </nav>
+  <!-- Akhir Navbar -->
   <main class="auth-wrapper">
     <section class="auth-card" aria-labelledby="loginTitle">
        <div class="container grey-text">
@@ -49,12 +38,12 @@
       <p class="auth-subtitle">Gunakan email dan kata sandi Anda.</p>
             <form id="loginForm">
               <div class="input-field">
-                <i class="material-icons prefix">email</i>
+                <img src="../img/email.png" alt="Email Icon" class="prefix-icon">
                 <input type="email" id="loginEmail" required>
                 <label for="loginEmail">Email</label>
               </div>
               <div class="input-field">
-                <i class="material-icons prefix">lock</i>
+                <img src="../img/pass.png" alt="Lock Icon" class="prefix-icon">
                 <input type="password" id="loginPassword" required>
                 <label for="loginPassword">Password</label>
               </div>
@@ -65,7 +54,7 @@
           </div>
           <div class="card-action center">
             <span class="grey-text">Belum punya akun?</span>
-            <a href="./signup.html" class="indigo-text">Daftar</a>
+            <a href="./signup.html" class="indigo-text">Sign Up</a>
           </div>
         </div>
       </div>
@@ -81,41 +70,8 @@
 
 
 
-  <script src="./js/web.js" defer></script>
-  <script type="text/javascript" src="./js/materialize.min.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
-  });
-</script>
-
-
-<script>
-  document.getElementById("loginForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const email = document.getElementById("loginEmail").value;
-    const password = document.getElementById("loginPassword").value;
-
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-
-    const foundUser = users.find(u => u.email === email && u.password === password);
-
-    if (foundUser) {
-      // simpan status login
-      localStorage.setItem("isLoggedIn", "true");
-      localStorage.setItem("userName", foundUser.name);
-
-      alert("Login berhasil! Selamat datang " + foundUser.name);
-      window.location.href = "../index.html"; // redirect ke index.html
-    } else {
-      alert("Email atau password salah!");
-    }
-  });
-</script>
-
-
+  <script src="../js/app.js" defer></script>
+  <script src="../js/login.js" defer></script>
 </body>
 </html>
 
