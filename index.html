@@ -52,6 +52,7 @@
 
       if (isLoggedIn === "true" && userName) {
         navMenu.innerHTML = `
+          <button class="close-btn" onclick="closeMenu()">×</button>
           <li><a href="#about">About</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#contact">Contact</a></li>
