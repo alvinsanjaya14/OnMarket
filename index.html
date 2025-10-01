@@ -28,7 +28,8 @@
       </ul>
 
       <div class="nav-icons">
-        <a href="#"><img src="img/cart.png" alt="Cart" class="icons-nav"></a>
+        <a href="./loginfitur/cart.html" id="cart-link"><img src="img/cart.png" alt="Cart" class="icons-nav"></a>
+        <span id="cart-count">0</span>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
     </div>
@@ -76,6 +77,94 @@
   </section>
 
   <!-- Akhir Keunggulan -->
+
+  <!-- Rekomendasi Produk -->
+
+  <!-- Rekomendasi Produk -->
+<section class="recommended-products">
+  <h2>Reccomended Products</h2>
+  <hr class="hrproduk">
+  <div class="product-grid">
+    <!-- Card 1 -->
+    <div class="product-card">
+      <img src="./img/beranda/baju1.png" alt="Baju">
+      <div class="rating">⭐⭐⭐⭐⭐ (1k)</div>
+      <p class="stock">Stok: 125</p>
+      <h3>Baju Kasual</h3>
+      <p class="price">Rp120.000</p>
+      <button>Tambah ke Keranjang</button>
+    </div>
+    <!-- Card 2 -->
+    <div class="product-card">
+      <img src="./img/beranda/shoes1.png" alt="Sepatu">
+      <div class="rating">⭐⭐⭐⭐ (300)</div>
+      <p class="stock">Stok: 8</p>
+      <h3>Sepatu Sport</h3>
+      <p class="price">Rp350.000</p>
+      <button>Tambah ke Keranjang</button>
+    </div>
+    <!-- Card 3 -->
+    <div class="product-card">
+      <img src="./img/beranda/tas.png" alt="Tas">
+      <div class="rating">⭐⭐⭐⭐⭐ (200)</div>
+      <p class="stock">Stok: 5</p>
+      <h3>Tas Sport</h3>
+      <p class="price">Rp250.000</p>
+      <button>Tambah ke Keranjang</button>
+    </div>
+    <!-- Card 4 -->
+    <div class="product-card">
+      <img src="./img/beranda/jam.png" alt="Jam">
+      <div class="rating">⭐⭐⭐⭐⭐ (50)</div>
+      <p class="stock">Stok: 10</p>
+      <h3>Jam Tangan</h3>
+      <p class="price">Rp500.000</p>
+      <button>Tambah ke Keranjang</button>
+    </div>
+    <!-- Card 5 -->
+    <div class="product-card">
+      <img src="./img/beranda/skincare.png" alt="Skincare">
+      <div class="rating">⭐⭐⭐⭐ (185)</div>
+      <p class="stock">Stok: 15</p>
+      <h3>Skincare</h3>
+      <p class="price">Rp180.000</p>
+      <button>Tambah ke Keranjang</button>
+    </div>
+    <!-- Card 6 -->
+    <div class="product-card">
+      <img src="./img/beranda/hp2.png" alt="Gadget">
+       <div class="rating">⭐⭐⭐⭐⭐ (120)</div>
+      <p class="stock">Stok: 20</p>
+      <h3>Smartphone</h3>
+      <p class="price">Rp10.000.000</p>
+      <button>Tambah ke Keranjang</button>
+    </div>
+
+    <!-- Card 7 -->
+  <div class="product-card">
+  <img src="./img/beranda/headphone.png" alt="Headphone">
+  <div class="rating">⭐⭐⭐⭐ (75)</div>
+  <p class="stock">Stok: 30</p>
+  <h3>Headphone Wireless</h3>
+  <p class="price">Rp750.000</p>
+  <button>Tambah ke Keranjang</button>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="product-card">
+  <img src="./img/beranda/laptop.png" alt="Laptop">
+  <div class="rating">⭐⭐⭐⭐⭐ (90)</div>
+  <p class="stock">Stok: 12</p>
+  <h3>Laptop</h3>
+  <p class="price">Rp18.000.000</p>
+  <button>Tambah ke Keranjang</button>
+   </div>
+  </div>
+</section>
+
+
+
+  <!-- Akhir Rekomendasi Produk -->
   
 </body>
 <script type="text/javascript" src="js/app.js"></script>
@@ -102,6 +191,7 @@
           e.preventDefault();
           localStorage.removeItem("isLoggedIn");
           localStorage.removeItem("userName");
+          localStorage.removeItem("cartCount");
           alert("Anda sudah logout.");
           window.location.href = "./loginfitur/login.html"; // Redirect to Login page after logout
         });
