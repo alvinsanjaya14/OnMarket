@@ -696,6 +696,98 @@ body {
 
 /* Akhir Top Brand */
 
+/* New Arrivals */
+.new-arrivals {
+  padding: 100px 20px;
+  text-align: left;
+  background: #f8f9fa;
+  background-color: #f2de05ff;
+  border-radius: 12px;
+}
+
+.new-arrivals h2 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+.new-arrivals h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: orange;
+  margin: 8px auto 0;
+  border-radius: 3px;
+}
+
+/* Container horizontal scroll */
+.arrivals-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.arrivals-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.arrival-card {
+  flex: 0 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.arrival-card:hover {
+  transform: translateY(-5px);
+}
+
+.arrival-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.arrival-card h4 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.arrival-card p {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.btn-arrival {
+  background: orange;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-arrival:hover {
+  background: darkorange;
+}
+
+/* Akhir New Arrivals */
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
