@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Pembayaran</h1>
+  </header>
+
+  <main class="payment-container">
+    <h2>Metode Pembayaran</h2>
+    <form id="paymentForm">
+      <label>
+        <input type="radio" name="payment" value="transfer" required>
+        Transfer Bank
+      </label><br>
+      <label>
+        <input type="radio" name="payment" value="ewallet">
+        E-Wallet (OVO, GoPay, Dana)
+      </label><br>
+      <label>
+        <input type="radio" name="payment" value="cod">
+        Bayar di Tempat (COD)
+      </label><br><br>
+
+      <button type="submit">Konfirmasi Pembayaran</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("paymentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const selected = document.querySelector('input[name="payment"]:checked').value;
+      alert("Pembayaran dengan metode: " + selected + " berhasil dipilih!");
+      localStorage.removeItem("cart");
+      window.location.href = "../index.html";
+    });
+  </script>
+</body>
+</html>
