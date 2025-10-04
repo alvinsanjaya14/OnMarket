@@ -69,10 +69,7 @@ renderCart();
 const checkoutBtn = document.getElementById("checkout-btn");
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
-    alert("Checkout berhasil!");
-    localStorage.removeItem("cart");
-    cart = [];
-    renderCart();
+    window.location.href = "./payment.html";
   });
 }
 
