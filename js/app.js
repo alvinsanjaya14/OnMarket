@@ -24,6 +24,23 @@ document.getElementById("cart-link").addEventListener("click", (e) => {
 
 });
 
+// Tombol Belanja Sekarang di index.html
+document.getElementById("shop-now-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn !== "true") {
+    alert("Silakan login terlebih dahulu");
+    window.location.href = "./loginfitur/login.html";
+  } else {
+    // Scroll ke bagian Recommended Products
+    const recommendedSection = document.getElementById("recommended-products");
+    if (recommendedSection) {
+      recommendedSection.scrollIntoView();
+    };
+  }
+});
+
 // Tambah ke cart
 const addToCartButtons = document.querySelectorAll(".product-card button");
 

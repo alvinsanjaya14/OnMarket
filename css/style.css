@@ -164,6 +164,10 @@ body {
   background: #f1c40f;
 }
 
+/* body {
+  overflow: hidden;
+} */
+
 .auth-wrapper {
   display: flex;
   align-items: center;
@@ -178,7 +182,7 @@ body {
   padding: 40px 30px;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-  width: 350px;
+  width: 400px;
   text-align: center;
 }
 .auth-title {
@@ -192,6 +196,8 @@ body {
   color: #888;
 }
 .input-field {
+  display : flex;
+  gap: 10px;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -216,6 +222,12 @@ body {
 .auth-card .card-action a {
   color: #1e2da9;
   text-decoration: none;
+}
+.prefix-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 /* akhir login.html */
@@ -636,6 +648,7 @@ body {
 }
 
 .btn {
+  width: 100%;
   background: #ff3b30;
   color: #fff;
   border: none;
@@ -713,7 +726,7 @@ body {
 
 /* New Arrivals */
 .new-arrivals {
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: left;
   background: #f8f9fa;
   background-color: #f2de05ff;
@@ -745,11 +758,18 @@ body {
   gap: 15px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 10px 0;
+  padding: 10px 3px 15px;
 }
 
 .arrivals-container::-webkit-scrollbar {
-  display: none;
+  margin-top: 100px;
+  height: 7px;
+  background: #ffffff;
+}
+
+.arrivals-container::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #2e2926;
 }
 
 /* Card */
@@ -834,6 +854,7 @@ body {
   }
 
   .nav-links.active {
+    display: flex;
     right: 0;
   }
 
