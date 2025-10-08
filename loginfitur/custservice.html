@@ -2,56 +2,112 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>directed from contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pusat Bantuan | OnMarket</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/custservicestyle.css">
 </head>
-
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html">
+        <img src="../img/logo.png" alt="OnMarket Logo" class="logo">
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../loginfitur/contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <!-- Tombol balik -->
+        <button class="btn-back" onclick="goBackToSignup()" title="Kembali">
+          <img src="../img/turn-left.png" alt="Kembali">
+        </button>
+
+        <!-- Menu toggle untuk mobile -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir Navbar -->
+
+  <header class="cust-header">
+    <h1>Pusat Bantuan OnMarket</h1>
+    <p>Kami siap membantu menjawab pertanyaan dan kendala Anda</p>
+  </header>
+
   <main class="cust-wrapper">
-    <section class="cust-card">
-      <div class="cust-nav">
-        <a href="mailto:support@onmarket.id" class="btn indigo">Hubungi Kami</a>
-      </div>
-      
-      <!-- belum bisa dipake search barnya-->
-      <div class="search-section">
-        <input type="text" id="faqSearch" placeholder="Cari..." oninput="filter()">
-      </div>
+    <!-- Search bar -->
+    <div class="search-section">
+      <input type="text" id="faqSearch" placeholder="Cari pertanyaan..." oninput="filterFAQ()">
+    </div>
 
-      <div class="faq-section">
-        <h2>Pertanyaan Umum</h2>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2>Pertanyaan Umum</h2>
 
-        <details>
-          <summary>Layanan Pengiriman</summary>
-          <p>OnMarket memberikan opsi ekspedisi yang terpercaya. Layanan pengiriman dapat diatur manual pada halaman pembayaran</p>
-        </details>
+      <details>
+        <summary>Layanan Pengiriman</summary>
+        <p>OnMarket menyediakan berbagai ekspedisi terpercaya. Pilihan kurir dapat Anda tentukan di halaman pembayaran.</p>
+      </details>
 
-        <details>
-          <summary>Promosi</summary>
-          <p>OnMarket menyediakan berbagai promosi yang dapat dinikmati oleh pelanggan. Pada halaman rinciann pembayaran, voucher pemotongan harga dapat digunakan. Pada halaman utama, terdapata kategori Flash Sale dimana tiap barang terdapat kuotanya untuk pemotongan. Selengkapnya cari bagian 'Flash Sale'.</p>
-        </details>
+      <details>
+        <summary>Promosi & Voucher</summary>
+        <p>Gunakan kode voucher di halaman pembayaran untuk mendapatkan potongan harga. Lihat juga menu “Flash Sale”.</p>
+      </details>
 
-        <details>
-          <summary>Pembayaran</summary>
-          <p>Pembayaran dapat dilakukan menggunakan kredit maupun debit, ataupun dompet digital serupa.</p>
-        </details>
-      </div>
+      <details>
+        <summary>Pembayaran</summary>
+        <p>Kami mendukung pembayaran dengan kartu kredit, debit, dan dompet digital seperti OVO, DANA, serta GoPay.</p>
+      </details>
 
-      <div id="terms" class="terms-section">
-        <h3>Syarat & Ketentuan</h3>
-        <ol>
-          <li>Pendahuluan:</li>
-          <li>Privasi:</li>
-          <li>Pembatalan & pengembalian barang:</li>
-          <li>Garansi:</li>
-        </ol>
-      </div>
+      <details>
+        <summary>Akun & Keamanan</summary>
+        <p>Pastikan email dan kata sandi Anda aman. Jangan bagikan OTP kepada siapapun, termasuk pihak yang mengaku dari OnMarket.</p>
+      </details>
 
+      <details>
+        <summary>Pengembalian Barang</summary>
+        <p>Barang dapat dikembalikan maksimal 3 hari setelah diterima jika rusak atau tidak sesuai deskripsi.</p>
+      </details>
     </section>
+
+    <!-- Kebijakan Privasi -->
+    <section class="policy-section">
+      <h2>Kebijakan Privasi</h2>
+      <p>OnMarket menghargai privasi setiap pengguna. Kami berkomitmen menjaga kerahasiaan seluruh data pribadi yang diberikan. Data pengguna hanya digunakan untuk keperluan transaksi, pengiriman, dan dukungan pelanggan. Kami tidak akan menjual, menyewakan, atau membagikan informasi pengguna kepada pihak ketiga tanpa izin resmi.</p>
+      <p>Setiap aktivitas di situs OnMarket dipantau untuk tujuan keamanan dan peningkatan layanan. Dengan menggunakan layanan kami, Anda menyetujui pengumpulan dan penggunaan data sebagaimana dijelaskan dalam kebijakan privasi ini.</p>
+    </section>
+
+    <!-- Syarat & Ketentuan -->
+    <section id="terms" class="terms-section">
+      <h2>Syarat & Ketentuan</h2>
+      <ol>
+        <li><b>Pendahuluan:</b> Penggunaan situs OnMarket tunduk pada kebijakan privasi dan ketentuan layanan yang berlaku.</li>
+        <li><b>Transaksi:</b> Setiap pesanan yang telah dikonfirmasi tidak dapat dibatalkan tanpa alasan yang sah.</li>
+        <li><b>Privasi:</b> Data pelanggan hanya digunakan untuk transaksi dan tidak dibagikan ke pihak ketiga tanpa izin.</li>
+        <li><b>Pengembalian:</b> Barang dapat dikembalikan dalam 3 hari setelah diterima jika cacat atau salah kirim.</li>
+        <li><b>Garansi:</b> Produk tertentu memiliki garansi resmi dari distributor atau produsen.</li>
+        <li><b>Perubahan:</b> OnMarket berhak memperbarui syarat dan kebijakan tanpa pemberitahuan sebelumnya.</li>
+      </ol>
+    </section>
+
+    <!-- Send Email OnMarket -->
+    <div class="contact-section">
+      <h3>Butuh Bantuan Lebih Lanjut?</h3>
+      <p>Hubungi tim layanan pelanggan kami melalui email resmi OnMarket.</p>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=williammarcello30@gmail.com&su=Permintaan+Bantuan+OnMarket&body=Halo+Tim+OnMarket%2C%0ASaya+membutuhkan+bantuan+mengenai..." 
+         target="_blank" 
+         class="btn-contact">
+        Kirim Email ke Support OnMarket
+      </a>
+    </div>
   </main>
 
-  <script src="../js/custservice.js"></script>
+ <script src= "../js/app.js" defer></script>
+ <script src="../js/custservice.js" defer></script>
 </body>
 </html>

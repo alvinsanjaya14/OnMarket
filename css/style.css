@@ -185,6 +185,11 @@ body {
   width: 400px;
   text-align: center;
 }
+
+.card-content {
+  padding: 0;
+  margin: auto;
+}
 .auth-title {
   font-size: 28px;
   margin-bottom: 10px;
@@ -196,11 +201,15 @@ body {
   color: #888;
 }
 .input-field {
-  display : flex;
+  display: flex;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 65px;
   margin-bottom: 20px;
   text-align: left;
 }
+
 .input-field label {
   font-size: 14px;
   color: #555;
@@ -228,6 +237,24 @@ body {
   height: 20px;
   flex-shrink: 0;
   object-fit: contain;
+}
+
+/* signuphtml */
+.terms-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: -5px;
+}
+
+.terms-label input[type="checkbox"] {
+  accent-color: #ff9900; /* oranye kekuningan */
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 /* akhir login.html */
@@ -261,7 +288,7 @@ body {
 
 .hero-text h2 {
   font-size: 1.5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 10px;
   color: #ff4141;
 }
@@ -285,16 +312,31 @@ body {
 }
 
 @keyframes shake {
-  0%   { transform: rotate(0deg) scale(1); }
-  25%  { transform: rotate(0deg) scale(1.1); }
-  30%  { transform: rotate(-1deg) scale(1.1); }
-  40%  { transform: rotate(1deg) scale(1.1); }
-  50%  { transform: rotate(-1deg) scale(1.1); }
-  60%  { transform: rotate(1deg) scale(1.1); }
-  65%  { transform: rotate(0deg) scale(1.1); }
-  100% { transform: rotate(0deg) scale(1); }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(0deg) scale(1.1);
+  }
+  30% {
+    transform: rotate(-1deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(1deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(-1deg) scale(1.1);
+  }
+  60% {
+    transform: rotate(1deg) scale(1.1);
+  }
+  65% {
+    transform: rotate(0deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }
-
 
 .btn-primary:hover {
   background: linear-gradient(90deg, #0056b3, #007bff);
@@ -825,6 +867,230 @@ body {
 
 /* Akhir New Arrivals */
 
+/* Contact Page */
+
+/* Header */
+.contact-header {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: linear-gradient(180deg, #ffb84d, #ff9900);
+  color: white;
+}
+
+.contact-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 16px;
+}
+
+/* Form Section */
+.contact-form {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #ff9900;
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff9900;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #ffb84d, #ff9900);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(90deg, #ff9900, #ff8000);
+}
+
+/* Contact Alternatives */
+.contact-alt {
+  text-align: center;
+  color: #ff6600;
+  padding: 50px 20px;
+  margin: 40px 30px;
+}
+
+.contact-alt h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-alt img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-buttons a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s ease;
+  font-size: 15px;
+  width: 250px;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+}
+.btn-whatsapp:hover {
+  background-color: #1ea955;
+}
+
+.btn-email {
+  background-color: #ffb84d;
+  color: white;
+}
+.btn-email:hover {
+  background-color: #ff9900;
+}
+
+/* Maps */
+.maps-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff4e0;
+  border-top: 3px solid #ffd480;
+}
+
+.maps-section h3 {
+  color: #ff9900;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.maps-section p {
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Cabang Grid */
+.branches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branch {
+  background: #fffdf8;
+  border: 2px solid #ffe0a1;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 153, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.branch:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.2);
+}
+
+.branch h4 {
+  color: #ff9900;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.branch p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.branch iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Tombol Maps */
+.btn-map {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffb84d, #ff9900);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-map:hover {
+  background: linear-gradient(90deg, #ff9900, #ff8000);
+}
+
+/* Akhir Contact Page */
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
@@ -971,4 +1237,99 @@ body {
   }
 
   /* akhir flash sale product */
+
+  /* Contact Page */
+
+  .maps-section {
+    padding: 40px 15px;
+  }
+
+  .maps-section h3 {
+    font-size: 22px;
+  }
+
+  .maps-section p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  .branches {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .branch {
+    padding: 16px;
+  }
+
+  .branch iframe {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .maps-section {
+    padding: 35px 10px;
+  }
+
+  .maps-section h3 {
+    font-size: 20px;
+  }
+
+  .branches {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .branch {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .branch h4 {
+    font-size: 18px;
+  }
+
+  .branch p {
+    font-size: 14px;
+  }
+
+  .branch iframe {
+    height: 200px;
+  }
+
+  .btn-map {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maps-section {
+    padding: 25px 8px;
+  }
+
+  .maps-section h3 {
+    font-size: 18px;
+  }
+
+  .maps-section p {
+    font-size: 13px;
+  }
+
+  .branch {
+    padding: 14px;
+  }
+
+  .branch iframe {
+    height: 180px;
+  }
+
+  .btn-map {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  /* akhir contact page */
 }

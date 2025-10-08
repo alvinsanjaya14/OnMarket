@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami | OnMarket</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <img src="../img/logo.png" alt="OnMarket Logo" class="logo">
+      
+      <ul class="nav-links" id="navLinks">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="./loginfitur/contact.html" target="_blank">Contact Us</a></li>
+        <li class="mobile-search">
+        <input type="text" placeholder="Search...">
+        </li>
+         <li>
+          <a href="./loginfitur/login.html"><img src="../img/user2.png" alt="User"></a>
+        </li>
+      </ul>
+
+      <div class="nav-icons">
+        <a href="./loginfitur/cart.html" id="cart-link"><img src="../img/cart.png" alt="Cart" class="icons-nav"></a>
+        <span id="cart-count">0</span>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    </div>
+
+  </nav>
+  <!-- Akhir Navbar -->
+
+  <!-- Header -->
+  <header class="contact-header">
+    <h1>Hubungi Kami</h1>
+    <p>Kami siap membantu Anda dengan layanan pelanggan terbaik</p>
+  </header>
+
+  <!-- Contact Form -->
+  <main class="contact-wrapper">
+    <section class="contact-form">
+      <h2>Formulir Kontak</h2>
+      <p>Silakan isi data berikut untuk menghubungi tim OnMarket</p>
+
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Nomor Telepon</label>
+          <input type="tel" id="phone" placeholder="Masukkan nomor telepon" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Masukkan alamat email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Pesan</label>
+          <textarea id="message" rows="4" placeholder="Tuliskan pesan Anda..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Kirim Pesan</button>
+      </form>
+    </section>
+
+    <!-- Alternatif Contact -->
+    <section class="contact-alt">
+      <h2>Atau Hubungi Langsung</h2>
+      <div class="contact-buttons">
+        <a href="https://wa.me/6285775230813?text=Halo%20OnMarket%2C%20saya%20butuh%20bantuan"
+           target="_blank" class="btn-whatsapp">
+          <img src="../img/whatsapp.png" alt="WhatsApp"> Chat via WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Maps -->
+    <!-- Lokasi Kami -->
+<section class="maps-section">
+  <h3>Lokasi Kami</h3>
+  <p>Anda dapat mengunjungi atau menghubungi kami di lokasi cabang berikut:</p>
+
+  <div class="branches">
+    <!-- Cabang 1 -->
+    <div class="branch">
+      <h4>Yogyakarta</h4>
+      <p>Jl. Taman Siswa No.45, Kota Yogyakarta, DIY</p>
+      <a href="https://maps.google.com/?q=Yogyakarta" target="_blank" class="btn-map">Lihat di Google Maps</a>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.008978812472!2d110.41422187593945!3d-7.882115892155661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a578a7cbe61b7%3A0xf7c8a81443e9eac!2sYogyakarta!5e0!3m2!1sid!2sid!4v1699870012345!5m2!1sid!2sid"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <!-- Cabang 2 -->
+    <div class="branch">
+      <h4>Jakarta</h4>
+      <p>Jl. MH Thamrin No.10, Jakarta Pusat</p>
+      <a href="https://maps.google.com/?q=Jakarta" target="_blank" class="btn-map">Lihat di Google Maps</a>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.408969272826!2d106.82279897593244!3d-6.206280460818495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d8f2a2a07b%3A0xaea2899d4b47a153!2sJl.%20M.H.%20Thamrin%20No.10%2C%20Jakarta!5e0!3m2!1sid!2sid!4v1699870999999!5m2!1sid!2sid"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <!-- Cabang 3 -->
+    <div class="branch">
+      <h4>Bandung</h4>
+      <p>Jl. Asia Afrika No.25, Bandung</p>
+      <a href="https://maps.google.com/?q=Bandung" target="_blank" class="btn-map">Lihat di Google Maps</a>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.849116376089!2d107.60885337594459!3d-6.917463594989885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e632d4b3022d%3A0x204b6f9961d0a8c2!2sBandung!5e0!3m2!1sid!2sid!4v1699871211111!5m2!1sid!2sid"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <!-- Cabang 4 -->
+    <div class="branch">
+      <h4>Surabaya</h4>
+      <p>Jl. Tunjungan No.101, Surabaya</p>
+      <a href="https://maps.google.com/?q=Surabaya" target="_blank" class="btn-map">Lihat di Google Maps</a>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.389548875416!2d112.73850977593943!3d-7.262030992757583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbfc3d0f3a7f%3A0xa6b8e51af8e1dd3!2sSurabaya!5e0!3m2!1sid!2sid!4v1699871300000!5m2!1sid!2sid"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <!-- Cabang 5 -->
+    <div class="branch">
+      <h4>Cabang Bali</h4>
+      <p>Jl. Gatot Subroto No.22, Denpasar, Bali</p>
+      <a href="https://maps.google.com/?q=Denpasar+Bali" target="_blank" class="btn-map">Lihat di Google Maps</a>
+      <iframe src="https://www.google.com/maps?q=Denpasar+Bali&output=embed"></iframe>
+    </div>
+
+    <!-- Cabang 6 -->
+    <div class="branch">
+      <h4>Cabang Medan</h4>
+       <p>Jl. Gajah Mada No.15, Medan</p>
+      <a href="https://maps.google.com/?q=Medan" target="_blank" class="btn-map">Lihat di Google Maps</a>
+      <iframe src="https://www.google.com/maps?q=Medan&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+ <script src="../js/contact.js" defer></script>
+
+</body>
+</html>
