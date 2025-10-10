@@ -3,17 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pembayaran</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>Pembayaran - OnMarket</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Pembayaran</h1>
-  </header>
 
-  <main class="payment-container">
-    <h2>Metode Pembayaran</h2>
-    <form id="paymentForm">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <img src="../img/logo.png" alt="OnMarket Logo" class="logo">
+      <ul class="nav-links" id="navLinks">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <a href="./login.html"><img src="../img/user2.png" alt="User"></a>
+        </li>
+      </ul>
+      <div class="nav-icons">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir Navbar -->
+
+  <main class="cart-container">
+    <h1 class="cart-title">Metode Pembayaran</h1>
+    <hr class="divider">
+
+    <form id="paymentForm" class="checkout-card">
       <label>
         <input type="radio" name="payment" value="transfer" required>
         Transfer Bank
@@ -27,10 +45,11 @@
         Bayar di Tempat (COD)
       </label><br><br>
 
-      <button type="submit">Konfirmasi Pembayaran</button>
+      <button type="submit" class="checkout-btn">Konfirmasi Pembayaran</button>
     </form>
   </main>
 
+  <script src="../js/app.js" defer></script>
   <script>
     document.getElementById("paymentForm").addEventListener("submit", function(e) {
       e.preventDefault();
