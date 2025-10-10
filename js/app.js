@@ -41,7 +41,6 @@ function closeMenu() {
 
 // fitur keranjang (cart)
 
-// Cek login pas buka cart.html
 document.getElementById("cart-link").addEventListener("click", (e) => {
   e.preventDefault();
   const isLoggedIn = localStorage.getItem("isLoggedIn");

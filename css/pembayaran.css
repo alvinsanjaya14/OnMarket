@@ -1,0 +1,97 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  margin: 0;
+}
+
+.cart-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-title {
+  text-align: center;
+  color: #ff6600;
+}
+
+.divider {
+  margin: 15px 0;
+}
+
+.checkout-card label {
+  display: block;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #e55a00;
+}
+
+.payment-details {
+  display: none;
+  margin-top: 20px;
+  background: #fff8f2;
+  border-left: 5px solid #ff6600;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.payment-details h3 {
+  margin-top: 0;
+  color: #ff6600;
+}
+
+.payment-details p {
+  font-size: 15px;
+  color: #333;
+}
+
+.copy-btn {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.copy-btn:hover {
+  background: #e55a00;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.summary-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.summary-info p {
+  margin: 2px 0;
+}

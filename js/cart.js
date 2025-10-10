@@ -88,6 +88,7 @@ renderCart();
 const checkoutBtn = document.getElementById("checkout-btn");
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
-    window.location.href = "./payment.html";
+    localStorage.setItem("checkoutItems", JSON.stringify(cart));
+    window.location.href = "../loginfitur/payment.html";
   });
 }

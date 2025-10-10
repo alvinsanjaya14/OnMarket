@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pembayaran - OnMarket</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pembayaran.css">
 </head>
 <body>
 
@@ -25,39 +26,68 @@
       </div>
     </div>
   </nav>
-  <!-- Akhir Navbar -->
 
   <main class="cart-container">
     <h1 class="cart-title">Metode Pembayaran</h1>
     <hr class="divider">
 
+    <div id="checkout-summary" class="checkout-summary-box">
+    </div>
+
     <form id="paymentForm" class="checkout-card">
-      <label>
-        <input type="radio" name="payment" value="transfer" required>
-        Transfer Bank
-      </label><br>
-      <label>
-        <input type="radio" name="payment" value="ewallet">
-        E-Wallet (OVO, GoPay, Dana)
-      </label><br>
-      <label>
-        <input type="radio" name="payment" value="cod">
-        Bayar di Tempat (COD)
-      </label><br><br>
+      <label><input type="radio" name="payment" value="transfer" required> Transfer Bank (Virtual Account)</label>
+      <label><input type="radio" name="payment" value="ewallet"> E-Wallet (OVO, GoPay, Dana)</label>
+      <label><input type="radio" name="payment" value="cod"> Bayar di Tempat (COD)</label>
 
       <button type="submit" class="checkout-btn">Konfirmasi Pembayaran</button>
     </form>
+
+    <div id="paymentDetails" class="payment-details"></div>
   </main>
 
-  <script src="../js/app.js" defer></script>
-  <script>
-    document.getElementById("paymentForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const selected = document.querySelector('input[name="payment"]:checked').value;
-      alert("Pembayaran dengan metode: " + selected + " berhasil dipilih!");
-      localStorage.removeItem("cart");
-      window.location.href = "../index.html";
-    });
-  </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>OnMarket</h3>
+        <p>Marketplace terpercaya di Indonesia yang memberikan pengalaman belanja terbaik, cepat, dan aman untuk semua pengguna.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="../loginfitur/about.html">Tentang Kami</a></li>
+          <li><a href="../loginfitur/custservice.html">Kebijakan Privasi</a></li>
+          <li><a href="../loginfitur/custservice.html">Syarat & Ketentuan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="../loginfitur/contact.html">Hubungi Kami</a></li>
+          <li><a href="#">Metode Pembayaran</a></li>
+          <li><a href="#">Pengembalian Barang</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ikuti Kami</h4>
+        <div class="social-links">
+          <a href="#"><img src="../img/facebook.png" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/williammarcelloss" target="_blank"><img src="../img/instagram.png" alt="Instagram" /></a>
+          <a href="#"><img src="../img/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="../img/youtube.png" alt="YouTube" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <b>OnMarket</b>. Semua Hak Dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/pembayaran.js"></script>
 </body>
 </html>
