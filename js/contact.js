@@ -6,7 +6,7 @@
       if (isLoggedIn === "true" && userName) {
         navMenu.innerHTML = `
           <button class="close-btn" onclick="closeMenu()">×</button>
-          <li><a href="./index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="../loginfitur/about.html">About</a></li>
           <li><a href="../loginfitur/contact.html" target="_blank">Contact Us</a></li>
