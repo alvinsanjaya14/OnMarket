@@ -10,12 +10,11 @@
     const foundUser = users.find(u => u.email === email && u.password === password);
 
     if (foundUser) {
-      // simpan status login
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("userName", foundUser.name);
 
       alert("Login berhasil! Selamat datang " + foundUser.name);
-      window.location.href = "../index.html"; // redirect ke index.html
+      window.location.href = "../index.html"; 
     } else {
       alert("Email atau password salah!");
     }

@@ -9,7 +9,7 @@ function closeMenu() {
   }
 // akhir navbar
 
-// Fungsi Search FAQ
+// Faq Function
     function filterFAQ() {
       const searchValue = document.getElementById("faqSearch").value.toLowerCase();
       const details = document.querySelectorAll(".faq-section details");
@@ -23,7 +23,6 @@ function closeMenu() {
       });
     }
 
-// Balik langsung ke halaman signup
 function goBackToSignup() {
   window.location.href = "./signup.html";
 }

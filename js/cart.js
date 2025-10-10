@@ -7,7 +7,7 @@
         navMenu.innerHTML = `
           <button class="close-btn" onclick="closeMenu()">×</button>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="../loginfitur/contact.html">Contact</a></li>
           <li><h1 class="btn-rush"> ${userName}</h1></li>
           <li><a href="#" class="btn-out">Logout</a></li>
         `;
@@ -18,7 +18,7 @@
           localStorage.removeItem("userName");
           localStorage.removeItem("cartCount");
           alert("Anda sudah logout.");
-          window.location.href = "./loginfitur/login.html"; // Redirect to Login page after logout
+          window.location.href = "./loginfitur/login.html";
         });
 
       };

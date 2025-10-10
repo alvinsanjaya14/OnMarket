@@ -6,9 +6,9 @@
       if (isLoggedIn === "true" && userName) {
         navMenu.innerHTML = `
           <button class="close-btn" onclick="closeMenu()">×</button>
-          <li><a href="#about">About</a></li>
+          <li><a href="./loginfitur/about.html">About</a></li>
           <li><a href="#">Products</a></li>
-          <li><a href="./loginfitur/contact.html">Contact</a></li>
+          <li><a href="./loginfitur/contact.html" target="_blank">Contact Us</a></li>
           <li class="mobile-search">
           <input type="text" placeholder="Search...">
            </li>
@@ -22,7 +22,7 @@
           localStorage.removeItem("userName");
           localStorage.removeItem("cartCount");
           alert("Anda sudah logout.");
-          window.location.href = "./loginfitur/login.html"; // Redirect to Login page after logout
+          window.location.href = "./loginfitur/login.html";
         });
 
       };

@@ -6,9 +6,10 @@
       if (isLoggedIn === "true" && userName) {
         navMenu.innerHTML = `
           <button class="close-btn" onclick="closeMenu()">×</button>
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li><a href="#">Products</a></li>
-          <li><a href="./loginfitur/contact.html">Contact</a></li>
+          <li><a href="../loginfitur/about.html">About</a></li>
+          <li><a href="../loginfitur/contact.html" target="_blank">Contact Us</a></li>
           <li class="mobile-search">
           <input type="text" placeholder="Search...">
            </li>
@@ -22,12 +23,12 @@
           localStorage.removeItem("userName");
           localStorage.removeItem("cartCount");
           alert("Anda sudah logout.");
-          window.location.href = "./loginfitur/login.html"; // Redirect to Login page after logout
+          window.location.href = "../loginfitur/login.html";
         });
 
       };
    
-      // navabr
+  // Hamburger menu
 function toggleMenu() {
   const navLinks = document.getElementById('navLinks');
   navLinks.classList.toggle('active');
@@ -36,19 +37,16 @@ function toggleMenu() {
 function closeMenu() {
     document.getElementById("navLinks").classList.remove("active");
   }
-// akhir navbar
-  
 
-  // Tombol Belanja Sekarang di index.html
+  
 document.getElementById("shop-now-btn").addEventListener("click", (e) => {
   e.preventDefault();
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
   if (isLoggedIn !== "true") {
     alert("Silakan login terlebih dahulu");
-    window.location.href = "./loginfitur/login.html";
+    window.location.href = "../loginfitur/login.html";
   } else {
-    // Scroll ke bagian Recommended Products
     const recommendedSection = document.getElementById("recommended-products");
     if (recommendedSection) {
       recommendedSection.scrollIntoView();
@@ -64,7 +62,7 @@ addToCartButtons.forEach(button => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn !== "true") {
       alert("Anda harus login terlebih dahulu untuk menambah ke keranjang.");
-      window.location.href = "./loginfitur/login.html";
+      window.location.href = "../loginfitur/login.html";
       return;
     }
 
@@ -110,7 +108,7 @@ addToCartButtons.forEach(button => {
 
       if (isLoggedIn !== "true") {
         alert("Anda harus login terlebih dahulu sebelum menghubungi kami.");
-        window.location.href = "./login.html";
+        window.location.href = "../loginfitur/login.html";
         return;
       }
 
